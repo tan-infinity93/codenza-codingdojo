@@ -1,0 +1,133 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>&lt;Codenza/&gt;</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  
+  <!--
+  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+  <script src="{% static 'js/script.js' %}"></script> -->
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">&lt;Codenza/&gt;</a>
+    </div>
+    
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">
+            Home
+            </a>
+        </li>
+        
+        <li><a href="https://syntaxdb.com" target="_blank">
+            Syntax
+            </a>
+        </li>
+        
+        <li><a href="http://stackoverflow.com/search?q" target="_blank">
+            Stack Overflow
+            </a>
+        </li>
+        
+        <li><a href="{% url 'codingground:about' %}">
+            About
+            </a>
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+
+<div class="container">
+
+	<h3>Code in C, C++, Java, Php, Python</h3>
+
+  <div class="row">
+    
+    <div class="col-sm-6">
+      <h4 class="win1">Code Window</h4>
+
+      <form action="/getdata/" method="POST">
+
+        <div class="form-group">
+            <p class="source">Enter Source Type: c / cpp / java / php / py. </p>
+            <input type="text" class="form-control" id="source_type" name="extension" value="{{ extension }}" required>
+            <input type="text" class="form-control" id="u_input" name="user_input" placeholder="Enter user variables here / Class name for Java">
+        </div>
+        
+        <div class="form-group">
+            <textarea class="form-control" rows="20" name="code" id="comment" required>{{ code }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Run Code</button>
+      
+      </form>
+    
+    </div>
+    
+    <div class="col-sm-6">
+      <h4 class="win1">See Output</h4>
+
+      <form action="/cleardata/" method="POST" >
+
+        <div class="form-group">
+            <p class="source">Syntax / Compilation Errors, shown below.</p>
+            
+            <p>
+              <!-- <label for="u_input">User Input:</label>
+              <input type="text" class="form-control" id="u_input" name="user_input" value="Enter user variables here / Class name for Java"> -->
+            </p>
+        </div>
+        
+        <div class="form-group">
+            <textarea class="form-control" rows="24" name="output" id="comment">{{ output }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Clear Output</button>
+      
+      </form>
+
+    </div>
+  
+  </div>
+</div>
+
+<br>
+
+    <div id="footer" class="bottom">
+        <p class="muted-credit">Coding ground by Codenza. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>

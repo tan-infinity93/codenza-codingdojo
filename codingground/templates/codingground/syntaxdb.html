@@ -1,0 +1,73 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Check Syntax</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="about">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">&lt;Codenza/&gt;</a>
+    </div>
+    
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="{% url 'codingground:syntaxdb' %}" target="_blank">Syntax</a></li>
+        <li><a href="#">Stack Overflow</a></li>
+        <li><a href="{% url 'codingground:about' %}">About</a></li>
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+
+<div class="row">
+
+  <br>
+  
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+    <h4 class="note">Got any syntax doubts...??? We got that covered up too...!!!</h4>
+  </div>
+  <div class="col-sm-3"></div>
+
+</div>
+
+<!-- Responsive Iframe -->
+
+<div class="embed-responsive embed-responsive-16by9">
+  
+  <iframe class="embed-responsive-item" src="/syntaxdb.com"></iframe>
+
+</div> <!--
+
+<iframe src="google.com"></iframe> -->
+
+</body>
+
+</html>

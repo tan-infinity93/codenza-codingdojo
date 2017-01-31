@@ -1,0 +1,93 @@
+title,h1,h2,h3,h4,h5,h6,p{
+
+	font-family: 'Ubuntu', sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 1000;
+}
+
+.navbar{
+
+	font-family: 'Ubuntu', sans-serif;
+	background-color: orange;
+	/* background-color: black; */
+	margin: 0;
+	border: none;
+}
+
+.white{
+
+	color: white;
+}
+
+li > a {
+
+	background-color: #48D1CC;
+	/*background-color: black;*/
+}
+
+body{
+/*
+	background-color: #F0F8FF;*/
+	background-color: #DCDCDC;
+}
+
+.win1{
+
+	background: #DDA0DD;
+	text-align: center;
+	vertical-align: middle;
+	min-height: 30px;
+	line-height: 30px;
+}
+
+textarea{
+
+	resize: none;
+}
+
+.bottom{
+
+	background-color: #90EE90;
+	min-height: 50px;
+	margin-bottom: -10px;
+}
+
+.muted-credit{
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.source{
+
+	font-size: 1.25em;
+}
+
+
+/***************************** ABout Page ***********************************/
+
+.about{
+
+	background-color: #40E0D0;
+}
+
+.jumbotron{
+
+	text-align: center;
+	border-margin: 0;
+}
+
+.note{
+
+	background-color: white;
+}
+
+/***************************** SyntaxDB page **********************/
+
+/*
+iframe{
+
+	width: 100%;
+}*/
